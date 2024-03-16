@@ -1,7 +1,8 @@
 ﻿using OddsApiClient.Requests;
-using OddsApiClient.Responses;
 using OddsApiClient.Mappers;
 using RestSharp;
+using RestSharp.Serializers.Json;
+using OddsApiClient.Models;
 
 namespace OddsApiClient;
 
@@ -19,18 +20,22 @@ public class OddsClient
 
   private readonly RestClient _client;
 
-  public OddsClient(RestClient client, string apiKey)
+  public OddsClient(string baseUrl, string apiKey)
   {
-    this._client = client;
+    this._client = new RestClient(new RestClientOptions(baseUrl),
+      useClientFactory: true,
+      configureSerialization: s=> s.UseSystemTextJson(new(System.Text.Json.JsonSerializerDefaults.Web)));
+    
     this._client.AddDefaultParameter("apiKey", apiKey);
   }
 
+
   /// <inheritdoc/>
-  public async Task<RetrieveHistoricalSportEventOddsResponse> RetrieveHistoricalSportEventOddsAsync(RetrieveHistoricalSportEventOddsRequest request, CancellationToken cancellation = default)
+  public async Task<List<Sport>> RetrieveSportsAsync(RetrieveSportsRequest request, CancellationToken cancellation = default)
   {
       cancellation.ThrowIfCancellationRequested();
       var restRequest = request.ToRestRequest();
-      var response = await this._client.ExecuteAsync<RetrieveHistoricalSportEventOddsResponse>(restRequest, cancellation);
+      var response = await this._client.ExecuteAsync<List<Sport>>(restRequest, cancellation);
 
       if (response.IsSuccessful)
         return response.Data!;
@@ -39,11 +44,11 @@ public class OddsClient
   }
 
   /// <inheritdoc/>
-  public async Task<RetrieveHistoricalSportEventsResponse> RetrieveHistoricalSportEventsAsync(RetrieveHistoricalSportEventsRequest request, CancellationToken cancellation = default)
+  public async Task<List<SportScores>> RetrieveSportScoresAsync(RetrieveSportScoresRequest request, CancellationToken cancellation = default)
   {
       cancellation.ThrowIfCancellationRequested();
       var restRequest = request.ToRestRequest();
-      var response = await this._client.ExecuteAsync<RetrieveHistoricalSportEventsResponse>(restRequest, cancellation);
+      var response = await this._client.ExecuteAsync<List<SportScores>>(restRequest, cancellation);
 
       if (response.IsSuccessful)
         return response.Data!;
@@ -52,11 +57,11 @@ public class OddsClient
   }
 
   /// <inheritdoc/>
-  public async Task<RetrieveHistoricalSportOddsResponse> RetrieveHistoricalSportOddsAsync(RetrieveHistoricalSportOddsRequest request, CancellationToken cancellation = default)
+  public async Task<List<Event>> RetrieveSportEventsAsync(RetrieveSportEventsRequest request, CancellationToken cancellation = default)
   {
       cancellation.ThrowIfCancellationRequested();
       var restRequest = request.ToRestRequest();
-      var response = await this._client.ExecuteAsync<RetrieveHistoricalSportOddsResponse>(restRequest, cancellation);
+      var response = await this._client.ExecuteAsync<List<Event>>(restRequest, cancellation);
 
       if (response.IsSuccessful)
         return response.Data!;
@@ -65,11 +70,11 @@ public class OddsClient
   }
 
   /// <inheritdoc/>
-  public async Task<RetrieveSportEventOddsResponse> RetrieveSportEventOddsAsync(RetrieveSportEventOddsRequest request, CancellationToken cancellation = default)
+  public async Task<List<Odds>> RetrieveSportOddsAsync(RetrieveSportOddsRequest request, CancellationToken cancellation = default)
   {
       cancellation.ThrowIfCancellationRequested();
       var restRequest = request.ToRestRequest();
-      var response = await this._client.ExecuteAsync<RetrieveSportEventOddsResponse>(restRequest, cancellation);
+      var response = await this._client.ExecuteAsync<List<Odds>>(restRequest, cancellation);
 
       if (response.IsSuccessful)
         return response.Data!;
@@ -78,11 +83,11 @@ public class OddsClient
   }
 
   /// <inheritdoc/>
-  public async Task<RetrieveSportEventsResponse> RetrieveSportEventsAsync(RetrieveSportEventsRequest request, CancellationToken cancellation = default)
+  public async Task<List<Odds>> RetrieveSportEventOddsAsync(RetrieveSportEventOddsRequest request, CancellationToken cancellation = default)
   {
       cancellation.ThrowIfCancellationRequested();
       var restRequest = request.ToRestRequest();
-      var response = await this._client.ExecuteAsync<RetrieveSportEventsResponse>(restRequest, cancellation);
+      var response = await this._client.ExecuteAsync<List<Odds>>(restRequest, cancellation);
 
       if (response.IsSuccessful)
         return response.Data!;
@@ -91,11 +96,26 @@ public class OddsClient
   }
 
   /// <inheritdoc/>
-  public async Task<RetrieveSportOddsResponse> RetrieveSportOddsAsync(RetrieveSportOddsRequest request, CancellationToken cancellation = default)
+  public async Task<List<HistoricalEvents>> RetrieveHistoricalSportEventsAsync(RetrieveHistoricalSportEventsRequest request, CancellationToken cancellation = default)
   {
       cancellation.ThrowIfCancellationRequested();
       var restRequest = request.ToRestRequest();
-      var response = await this._client.ExecuteAsync<RetrieveSportOddsResponse>(restRequest, cancellation);
+      var response = await this._client.ExecuteAsync<List<HistoricalEvents>>(restRequest, cancellation);
+  
+      if (response.IsSuccessful)
+        return response.Data!;
+
+        Console.WriteLine(this._client.BuildUri(restRequest).ToString());
+      
+      throw this._client.BuildExceptionFromResponse(response);
+  }
+
+  /// <inheritdoc/>
+  public async Task<List<HistoricalSportOdds>> RetrieveHistoricalSportOddsAsync(RetrieveHistoricalSportOddsRequest request, CancellationToken cancellation = default)
+  {
+      cancellation.ThrowIfCancellationRequested();
+      var restRequest = request.ToRestRequest();
+      var response = await this._client.ExecuteAsync<List<HistoricalSportOdds>>(restRequest, cancellation);
 
       if (response.IsSuccessful)
         return response.Data!;
@@ -104,24 +124,11 @@ public class OddsClient
   }
 
   /// <inheritdoc/>
-  public async Task<RetrieveSportsResponse> RetrieveSportsAsync(RetrieveSportsRequest request, CancellationToken cancellation = default)
+  public async Task<HistoricalEventOdds> RetrieveHistoricalSportEventOddsAsync(RetrieveHistoricalSportEventOddsRequest request, CancellationToken cancellation = default)
   {
       cancellation.ThrowIfCancellationRequested();
       var restRequest = request.ToRestRequest();
-      var response = await this._client.ExecuteAsync<RetrieveSportsResponse>(restRequest, cancellation);
-
-      if (response.IsSuccessful)
-        return response.Data!;
-      
-      throw this._client.BuildExceptionFromResponse(response);
-  }
-
-  /// <inheritdoc/>
-  public async Task<RetrieveSportScoresResponse> RetrieveSportScoresAsync(RetrieveSportScoresRequest request, CancellationToken cancellation = default)
-  {
-      cancellation.ThrowIfCancellationRequested();
-      var restRequest = request.ToRestRequest();
-      var response = await this._client.ExecuteAsync<RetrieveSportScoresResponse>(restRequest, cancellation);
+      var response = await this._client.ExecuteAsync<HistoricalEventOdds>(restRequest, cancellation);
 
       if (response.IsSuccessful)
         return response.Data!;

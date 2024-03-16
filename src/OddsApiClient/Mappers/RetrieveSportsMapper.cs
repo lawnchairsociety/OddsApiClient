@@ -6,6 +6,10 @@ namespace OddsApiClient.Mappers;
 internal static class RetrieveSportsMapper
 {
   public static RestRequest ToRestRequest(this RetrieveSportsRequest request)
-    => new RestRequest(OddsClient.SportsEndpoint, Method.Get)
-        .AddQueryParameter("all", request.All);
+  {
+    var req = new RestRequest(OddsClient.SportsEndpoint, Method.Get)
+        .AddParameter("all", request.All ? "true":"false");
+    
+    return req;
+  }
 }

@@ -1,3 +1,4 @@
+using System.Globalization;
 using OddsApiClient.Requests;
 using RestSharp;
 
@@ -7,10 +8,10 @@ internal static class RetrieveHistoricalSportOddsMapper
 {
   public static RestRequest ToRestRequest(this RetrieveHistoricalSportOddsRequest request)
   {
-    var req = new RestRequest(OddsClient.SportEventOddsEndpoint, Method.Get)
+    var req = new RestRequest(OddsClient.HistoricalSportOddsEndpoint, Method.Get)
       .AddUrlSegment("sport", request.Sport)
       .AddQueryParameter("regions", request.Regions)
-      .AddQueryParameter("date", request.Date.ToString("s"))
+      .AddQueryParameter("date", request.Date.ToString("yyyy-MM-ddTHH:mm:ssZ", CultureInfo.InvariantCulture), false)
       .AddQueryParameter("markets", request.Markets)
       .AddQueryParameter("dateFormat", request.DateFormat)
       .AddQueryParameter("oddsFormat", request.OddsFormat);

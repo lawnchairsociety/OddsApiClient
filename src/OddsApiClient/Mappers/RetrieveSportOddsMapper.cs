@@ -1,3 +1,4 @@
+using System.Globalization;
 using OddsApiClient.Requests;
 using RestSharp;
 
@@ -21,9 +22,9 @@ internal static class RetrieveSportOddsMapper
       req.AddQueryParameter("bookmakers", request.Bookmakers);
 
     if (request.CommenceTimeFrom.HasValue)
-      req.AddQueryParameter("commenceTimeFrom", request.CommenceTimeFrom.Value.ToString("s"));
+      req.AddQueryParameter("commenceTimeFrom", request.CommenceTimeFrom.Value.ToString("yyyy-MM-ddTHH:mm:ssZ", CultureInfo.InvariantCulture), false);
     if (request.CommenceTimeTo.HasValue)
-      req.AddQueryParameter("commenceTimeTo", request.CommenceTimeTo.Value.ToString("s"));
+      req.AddQueryParameter("commenceTimeTo", request.CommenceTimeTo.Value.ToString("yyyy-MM-ddTHH:mm:ssZ", CultureInfo.InvariantCulture), false);
 
     return req;
   }

@@ -1,3 +1,4 @@
+using System.Globalization;
 using OddsApiClient.Requests;
 using RestSharp;
 
@@ -11,7 +12,7 @@ internal static class RetrieveHistoricalSportEventOddsMapper
       .AddUrlSegment("sport", request.Sport)
       .AddUrlSegment("eventId", request.EventId)
       .AddQueryParameter("regions", request.Regions)
-      .AddQueryParameter("date", request.Date.ToString("s"))
+      .AddQueryParameter("date", request.Date.ToString("yyyy-MM-ddTHH:mm:ssZ", CultureInfo.InvariantCulture), false)
       .AddQueryParameter("markets", request.Markets)
       .AddQueryParameter("dateFormat", request.DateFormat)
       .AddQueryParameter("oddsFormat", request.OddsFormat);

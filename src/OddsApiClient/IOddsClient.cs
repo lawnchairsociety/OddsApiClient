@@ -1,6 +1,6 @@
 using OddsApiClient.Exceptions;
 using OddsApiClient.Requests;
-using OddsApiClient.Responses;
+using OddsApiClient.Models;
 
 namespace OddsApiClient;
 
@@ -16,7 +16,7 @@ public interface IOddsClient
   /// <exception cref="OddsApiClientInvalidParameterException"></exception>
   /// <exception cref="OddsApiClientTooManyRequestsException"></exception>
   /// <exception cref="OddsApiClientInternalErrorException"></exception>
-  Task<RetrieveSportsResponse> RetrieveSportsAsync(RetrieveSportsRequest request, CancellationToken cancellation = default);
+  Task<List<Sport>> RetrieveSportsAsync(RetrieveSportsRequest request, CancellationToken cancellation = default);
 
   /// <summary>
   /// Retrieves all live and upcoming events for a given sport, and optionally recently completed events. Live and completed events will contain scores.
@@ -28,7 +28,7 @@ public interface IOddsClient
   /// <exception cref="OddsApiClientInvalidParameterException"></exception>
   /// <exception cref="OddsApiClientTooManyRequestsException"></exception>
   /// <exception cref="OddsApiClientInternalErrorException"></exception>
-  Task<RetrieveSportScoresResponse> RetrieveSportScoresAsync(RetrieveSportScoresRequest request,CancellationToken cancellation = default);
+  Task<List<SportScores>> RetrieveSportScoresAsync(RetrieveSportScoresRequest request,CancellationToken cancellation = default);
 
   /// <summary>
   /// Retrieves in-play and pre-match events for a specified sport or league. Odds are not included in the response. This endpoint does not count against the usage quota.
@@ -40,7 +40,7 @@ public interface IOddsClient
   /// <exception cref="OddsApiClientInvalidParameterException"></exception>
   /// <exception cref="OddsApiClientTooManyRequestsException"></exception>
   /// <exception cref="OddsApiClientInternalErrorException"></exception>
-  Task<RetrieveSportEventsResponse> RetrieveSportEventsAsync(RetrieveSportEventsRequest request,CancellationToken cancellation = default);
+  Task<List<Event>> RetrieveSportEventsAsync(RetrieveSportEventsRequest request,CancellationToken cancellation = default);
 
   /// <summary>
   /// Retrieves all live and upcoming events for a given sport, showing bookmaker odds for the specified region and markets.
@@ -52,7 +52,7 @@ public interface IOddsClient
   /// <exception cref="OddsApiClientInvalidParameterException"></exception>
   /// <exception cref="OddsApiClientTooManyRequestsException"></exception>
   /// <exception cref="OddsApiClientInternalErrorException"></exception>
-  Task<RetrieveSportOddsResponse> RetrieveSportOddsAsync(RetrieveSportOddsRequest request,CancellationToken cancellation = default);
+  Task<List<Odds>> RetrieveSportOddsAsync(RetrieveSportOddsRequest request,CancellationToken cancellation = default);
 
   /// <summary>
   /// Retrieves bookmaker odds for a single event as long as the event is still valid (live or upcoming).
@@ -65,7 +65,7 @@ public interface IOddsClient
   /// <exception cref="OddsApiClientInvalidParameterException"></exception>
   /// <exception cref="OddsApiClientTooManyRequestsException"></exception>
   /// <exception cref="OddsApiClientInternalErrorException"></exception>
-  Task<RetrieveSportEventOddsResponse> RetrieveSportEventOddsAsync(RetrieveSportEventOddsRequest request,CancellationToken cancellation = default);
+  Task<List<Odds>> RetrieveSportEventOddsAsync(RetrieveSportEventOddsRequest request,CancellationToken cancellation = default);
 
   /// <summary>
   /// Retrieves events for the specified sport as they appeared at the specified timestamp (date parameter). Odds are not included in the response.
@@ -77,7 +77,7 @@ public interface IOddsClient
   /// <exception cref="OddsApiClientInvalidParameterException"></exception>
   /// <exception cref="OddsApiClientTooManyRequestsException"></exception>
   /// <exception cref="OddsApiClientInternalErrorException"></exception>
-  Task<RetrieveHistoricalSportEventsResponse> RetrieveHistoricalSportEventsAsync(RetrieveHistoricalSportEventsRequest request,CancellationToken cancellation = default);
+  Task<List<HistoricalEvents>> RetrieveHistoricalSportEventsAsync(RetrieveHistoricalSportEventsRequest request,CancellationToken cancellation = default);
 
   /// <summary>
   /// Retrieves live and upcoming events at a point in time for a given sport, including bookmaker odds for the specified region and markets.
@@ -89,7 +89,7 @@ public interface IOddsClient
   /// <exception cref="OddsApiClientInvalidParameterException"></exception>
   /// <exception cref="OddsApiClientTooManyRequestsException"></exception>
   /// <exception cref="OddsApiClientInternalErrorException"></exception>
-  Task<RetrieveHistoricalSportOddsResponse> RetrieveHistoricalSportOddsAsync(RetrieveHistoricalSportOddsRequest request,CancellationToken cancellation = default);
+  Task<List<HistoricalSportOdds>> RetrieveHistoricalSportOddsAsync(RetrieveHistoricalSportOddsRequest request,CancellationToken cancellation = default);
 
   /// <summary>
   /// Retrieves bookmaker odds for a single event as they appeared at the specified timestamp (date parameter).
@@ -102,5 +102,5 @@ public interface IOddsClient
   /// <exception cref="OddsApiClientInvalidParameterException"></exception>
   /// <exception cref="OddsApiClientTooManyRequestsException"></exception>
   /// <exception cref="OddsApiClientInternalErrorException"></exception>
-  Task<RetrieveHistoricalSportEventOddsResponse> RetrieveHistoricalSportEventOddsAsync(RetrieveHistoricalSportEventOddsRequest request,CancellationToken cancellation = default);
+  Task<HistoricalEventOdds> RetrieveHistoricalSportEventOddsAsync(RetrieveHistoricalSportEventOddsRequest request,CancellationToken cancellation = default);
 }
