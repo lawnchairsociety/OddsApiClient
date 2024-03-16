@@ -19,9 +19,10 @@ public class OddsClient
 
   private readonly RestClient _client;
 
-  public OddsClient(RestClient client)
+  public OddsClient(RestClient client, string apiKey)
   {
     this._client = client;
+    this._client.AddDefaultParameter("apiKey", apiKey);
   }
 
   /// <inheritdoc/>

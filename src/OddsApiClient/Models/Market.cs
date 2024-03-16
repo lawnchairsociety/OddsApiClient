@@ -5,7 +5,7 @@ public class Market
   /// <summary>
   /// The type of the odds market
   /// </summary>
-  public MarketType Key { get; set; } = MarketType.Unknown;
+  public string Key { get; set; } = String.Empty;
 
   /// <summary>
   /// A timestamp of when the markets' odds were last read
