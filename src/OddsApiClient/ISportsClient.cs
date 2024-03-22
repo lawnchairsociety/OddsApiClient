@@ -3,6 +3,7 @@ using OddsApiClient.Extensions;
 using OddsApiClient.Mappers;
 using OddsApiClient.Models;
 using OddsApiClient.Requests;
+using OddsApiClient.Responses;
 using RestSharp;
 
 namespace OddsApiClient;
@@ -19,7 +20,7 @@ public interface ISportsClient
     /// <exception cref="OddsApiClientInvalidParameterException"></exception>
     /// <exception cref="OddsApiClientTooManyRequestsException"></exception>
     /// <exception cref="OddsApiClientInternalErrorException"></exception>
-    Task<List<Sport>> RetrieveSportsAsync(RetrieveSportsRequest request, CancellationToken cancellation = default);
+    Task<RetrieveSportsResponse> RetrieveSportsAsync(RetrieveSportsRequest request, CancellationToken cancellation = default);
 }
 
 public class SportsClient
@@ -35,13 +36,23 @@ public class SportsClient
     }
 
     /// <inheritdoc/>
-    public async Task<List<Sport>> RetrieveSportsAsync(RetrieveSportsRequest request, CancellationToken cancellation = default)
+    public async Task<RetrieveSportsResponse> RetrieveSportsAsync(RetrieveSportsRequest request, CancellationToken cancellation = default)
     {
         cancellation.ThrowIfCancellationRequested();
 
         var restRequest = request.ToRestRequest();
         var response = await this._client.ExecuteAsync<List<Sport>>(restRequest, cancellation);
-        if (response.IsSuccessful) return response.Data!;
+        if (response.IsSuccessful)
+        {
+            _ = int.TryParse(this._client.GetHeaderValue(response, "x-requests-used"), out int used);
+            _ = int.TryParse(this._client.GetHeaderValue(response, "x-requests-remaining"), out int remaining);
+            return new RetrieveSportsResponse
+            {
+                RequestsUsed = used,
+                RequestsRemaining = remaining,
+                Sports = response.Data!
+            };
+        }
 
         throw this._client.BuildExceptionFromResponse(response);
     }

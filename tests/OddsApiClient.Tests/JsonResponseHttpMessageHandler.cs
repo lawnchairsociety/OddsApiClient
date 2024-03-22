@@ -24,6 +24,8 @@ public class JsonResponseHttpMessageHandler
             RequestMessage = request,
             Content = this._jsonContent
         };
+        response.Headers.Add("X-Requests-Used", "13");
+        response.Headers.Add("X-Requests-Remaining", "87");
 
         this.Request = request;
         this.Response = response;

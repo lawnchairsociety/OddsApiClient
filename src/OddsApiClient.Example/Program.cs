@@ -8,7 +8,7 @@ public class Program
     static async Task Main(string[] args)
     {
         var baseUrl = "https://api.the-odds-api.com";
-        var apiKey = ""; // Add your free API Key here
+        var apiKey = "6a5611df940c1d289ef3936433e04e6a"; // Add your free API Key here
         var clientOptions = new OddsApiClientOptions
         {
             BaseUrl = baseUrl,

@@ -24,8 +24,11 @@ public class SportsClientTests
 
         // Assert
         Assert.NotNull(response);
-        Assert.True(response.Count > 0);
-        Assert.Equal("americanfootball_cfl", response[0].Key);
+        Assert.True(response.Sports.Count > 0);
+        Assert.Equal("americanfootball_cfl", response.Sports[0].Key);
+
+        Assert.Equal(13, response.RequestsUsed);
+        Assert.Equal(87, response.RequestsRemaining);
 
         Assert.NotNull(handler.Request?.RequestUri);
         Assert.Contains($"/v4/sports", handler.Request.RequestUri.AbsoluteUri);

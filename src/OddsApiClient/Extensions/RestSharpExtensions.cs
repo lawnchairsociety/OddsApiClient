@@ -26,4 +26,19 @@ internal static class RestSharpExtensions
             _ => new OddsApiClientException(message)
         };
     }
+
+    public static string GetHeaderValue (this IRestClient client, RestResponse response, string name)
+    {
+        try
+        {
+            var value = response.Headers.Where(x => x.Name.ToLower() == name)
+                .Select(x => x.Value).FirstOrDefault().ToString();
+
+            return value;
+        }
+        catch (Exception e)
+        {
+            return null;
+        }
+    }
 }
