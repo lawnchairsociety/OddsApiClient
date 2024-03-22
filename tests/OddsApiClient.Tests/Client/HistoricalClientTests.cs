@@ -1,6 +1,6 @@
-using Xunit;
-using OddsApiClient.Requests;
 using System.Globalization;
+using OddsApiClient.Requests;
+using Xunit;
 
 namespace OddsApiClient.Tests.Client;
 

@@ -6,11 +6,11 @@ namespace OddsApiClient.Exceptions;
 public class OddsApiClientException
   : Exception
 {
-  public OddsApiClientException(string message)
-    : base(message) { }
+    public OddsApiClientException(string message)
+      : base(message) { }
 
-  public OddsApiClientException(string message, Exception innerException)
-    : base(message, innerException) { }
+    public OddsApiClientException(string message, Exception innerException)
+      : base(message, innerException) { }
 }
 
 /// <summary>
@@ -19,11 +19,11 @@ public class OddsApiClientException
 public class OddsApiClientUnauthorizedException
   : OddsApiClientException
 {
-  public OddsApiClientUnauthorizedException(string message)
-    : base(message) { }
+    public OddsApiClientUnauthorizedException(string message)
+      : base(message) { }
 
-  public OddsApiClientUnauthorizedException(string message, Exception innerException)
-    : base(message, innerException) { }
+    public OddsApiClientUnauthorizedException(string message, Exception innerException)
+      : base(message, innerException) { }
 }
 
 /// <summary>
@@ -32,11 +32,11 @@ public class OddsApiClientUnauthorizedException
 public class OddsApiClientNotFoundException
   : OddsApiClientException
 {
-  public OddsApiClientNotFoundException(string message)
-    : base(message) { }
+    public OddsApiClientNotFoundException(string message)
+      : base(message) { }
 
-  public OddsApiClientNotFoundException(string message, Exception innerException)
-    : base(message, innerException) { }
+    public OddsApiClientNotFoundException(string message, Exception innerException)
+      : base(message, innerException) { }
 }
 
 /// <summary>
@@ -45,11 +45,11 @@ public class OddsApiClientNotFoundException
 public class OddsApiClientInvalidParameterException
   : OddsApiClientException
 {
-  public OddsApiClientInvalidParameterException(string message)
-    : base(message) { }
+    public OddsApiClientInvalidParameterException(string message)
+      : base(message) { }
 
-  public OddsApiClientInvalidParameterException(string message, Exception innerException)
-    : base(message, innerException) { }
+    public OddsApiClientInvalidParameterException(string message, Exception innerException)
+      : base(message, innerException) { }
 }
 
 /// <summary>
@@ -58,11 +58,11 @@ public class OddsApiClientInvalidParameterException
 public class OddsApiClientTooManyRequestsException
   : OddsApiClientException
 {
-  public OddsApiClientTooManyRequestsException(string message)
-    : base(message) { }
+    public OddsApiClientTooManyRequestsException(string message)
+      : base(message) { }
 
-  public OddsApiClientTooManyRequestsException(string message, Exception innerException)
-    : base(message, innerException) { }
+    public OddsApiClientTooManyRequestsException(string message, Exception innerException)
+      : base(message, innerException) { }
 }
 
 /// <summary>
@@ -71,9 +71,9 @@ public class OddsApiClientTooManyRequestsException
 public class OddsApiClientInternalErrorException
   : OddsApiClientException
 {
-  public OddsApiClientInternalErrorException(string message)
-    : base(message) { }
+    public OddsApiClientInternalErrorException(string message)
+      : base(message) { }
 
-  public OddsApiClientInternalErrorException(string message, Exception innerException)
-    : base(message, innerException) { }
+    public OddsApiClientInternalErrorException(string message, Exception innerException)
+      : base(message, innerException) { }
 }
