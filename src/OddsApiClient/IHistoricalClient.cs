@@ -19,7 +19,32 @@ public interface IHistoricalClient
     /// <exception cref="OddsApiClientInvalidParameterException"></exception>
     /// <exception cref="OddsApiClientTooManyRequestsException"></exception>
     /// <exception cref="OddsApiClientInternalErrorException"></exception>
-    Task<List<HistoricalEvents>> RetrieveHistoricalSportEventsAsync(RetrieveHistoricalSportEventsRequest request, CancellationToken cancellation = default);
+    Task<HistoricalEvents> RetrieveHistoricalSportEventsAsync(RetrieveHistoricalSportEventsRequest request, CancellationToken cancellation = default);
+
+    /// <summary>
+    /// Retrieves live and upcoming events at a point in time for a given sport, including bookmaker odds for the specified region and markets.
+    /// </summary>
+    /// <param name="request">The request.</param>
+    /// <param name="cancellation">The token used to cancel the operation.</param>
+    /// <returns>The response.</returns>
+    /// <exception cref="OddsApiClientUnauthorizedException"></exception>
+    /// <exception cref="OddsApiClientInvalidParameterException"></exception>
+    /// <exception cref="OddsApiClientTooManyRequestsException"></exception>
+    /// <exception cref="OddsApiClientInternalErrorException"></exception>
+    Task<HistoricalSportOdds> RetrieveHistoricalSportOddsAsync(RetrieveHistoricalSportOddsRequest request, CancellationToken cancellation = default);
+
+    /// <summary>
+    /// Retrieves bookmaker odds for a single event as they appeared at the specified timestamp (date parameter).
+    /// </summary>
+    /// <param name="request">The request.</param>
+    /// <param name="cancellation">The token used to cancel the operation.</param>
+    /// <returns>The response.</returns>
+    /// <exception cref="OddsApiClientUnauthorizedException"></exception>
+    /// <exception cref="OddsApiClientNotFoundException"></exception>
+    /// <exception cref="OddsApiClientInvalidParameterException"></exception>
+    /// <exception cref="OddsApiClientTooManyRequestsException"></exception>
+    /// <exception cref="OddsApiClientInternalErrorException"></exception>
+    Task<HistoricalEventOdds> RetrieveHistoricalSportEventOddsAsync(RetrieveHistoricalSportEventOddsRequest request, CancellationToken cancellation = default);
 }
 
 public class HistoricalClient
@@ -37,12 +62,12 @@ public class HistoricalClient
     }
 
     /// <inheritdoc/>
-    public async Task<List<HistoricalEvents>> RetrieveHistoricalSportEventsAsync(RetrieveHistoricalSportEventsRequest request, CancellationToken cancellation = default)
+    public async Task<HistoricalEvents> RetrieveHistoricalSportEventsAsync(RetrieveHistoricalSportEventsRequest request, CancellationToken cancellation = default)
     {
         cancellation.ThrowIfCancellationRequested();
 
         var restRequest = request.ToRestRequest();
-        var response = await this._client.ExecuteAsync<List<HistoricalEvents>>(restRequest, cancellation);
+        var response = await this._client.ExecuteAsync<HistoricalEvents>(restRequest, cancellation);
         if (response.IsSuccessful) return response.Data!;
 
         throw this._client.BuildExceptionFromResponse(response);

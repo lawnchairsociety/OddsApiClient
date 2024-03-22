@@ -1,0 +1,15 @@
+{
+  "timestamp": "2023-10-10T12:10:39Z",
+  "previous_timestamp": "2023-10-10T12:05:39Z",
+  "next_timestamp": "2023-10-10T12:15:39Z",
+  "data": [
+    {
+      "id": "e912304de2b2ce35b473ce2ecd3d1502",
+      "sport_key": "americanfootball_nfl",
+      "sport_title": "NFL",
+      "commence_time": "2023-10-11T23:10:00Z",
+      "home_team": "Houston Texans",
+      "away_team": "Kansas City Chiefs"
+    }
+  ]
+}
