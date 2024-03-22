@@ -7,15 +7,16 @@ internal static class RetrieveSportScoresMapper
 {
   public static RestRequest ToRestRequest(this RetrieveSportScoresRequest request)
   {
-    var req = new RestRequest(OddsClient.SportScoresEndpoint, Method.Get)
-        .AddUrlSegment("sport", request.Sport)
-        .AddQueryParameter("dateFormat", request.DateFormat);
+    var restRequest = new RestRequest(EventsClient.SportScoresEndpoint)
+      .AddUrlSegment("sport", request.Sport)
+      .AddQueryParameter("dateFormat", request.DateFormat);
+    restRequest.Method = Method.Get;
     
     if (request.DaysFrom.HasValue)
-      req.AddQueryParameter("daysFrom", request.DaysFrom.Value);
-    if (!String.IsNullOrEmpty(request.EventIds))
-      req.AddQueryParameter("eventIds", request.EventIds);
+      restRequest.AddQueryParameter("daysFrom", request.DaysFrom.Value);
+    if (!string.IsNullOrEmpty(request.EventIds))
+      restRequest.AddQueryParameter("eventIds", request.EventIds);
     
-    return req;
+    return restRequest;
   }
 }

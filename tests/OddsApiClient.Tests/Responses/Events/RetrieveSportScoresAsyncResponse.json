@@ -1,0 +1,527 @@
+[
+  {
+    "id": "2aeab0a9d68f90299e8f38870d1d816c",
+    "sport_key": "icehockey_nhl",
+    "sport_title": "NHL",
+    "commence_time": "2024-03-19T00:41:10Z",
+    "completed": true,
+    "home_team": "Calgary Flames",
+    "away_team": "Washington Capitals",
+    "scores": [
+      {
+        "name": "Calgary Flames",
+        "score": "2"
+      },
+      {
+        "name": "Washington Capitals",
+        "score": "5"
+      }
+    ],
+    "last_update": "2024-03-19T09:53:47Z"
+  },
+  {
+    "id": "18378867ee8ca87539713b426bfbf887",
+    "sport_key": "icehockey_nhl",
+    "sport_title": "NHL",
+    "commence_time": "2024-03-19T02:09:01Z",
+    "completed": true,
+    "home_team": "Seattle Kraken",
+    "away_team": "Buffalo Sabres",
+    "scores": [
+      {
+        "name": "Seattle Kraken",
+        "score": "2"
+      },
+      {
+        "name": "Buffalo Sabres",
+        "score": "6"
+      }
+    ],
+    "last_update": "2024-03-19T09:53:47Z"
+  },
+  {
+    "id": "8be0add21e1a85d5e5bf5b85456d4e5a",
+    "sport_key": "icehockey_nhl",
+    "sport_title": "NHL",
+    "commence_time": "2024-03-19T23:08:20Z",
+    "completed": true,
+    "home_team": "Detroit Red Wings",
+    "away_team": "Columbus Blue Jackets",
+    "scores": [
+      {
+        "name": "Detroit Red Wings",
+        "score": "4"
+      },
+      {
+        "name": "Columbus Blue Jackets",
+        "score": "3"
+      }
+    ],
+    "last_update": "2024-03-20T23:25:31Z"
+  },
+  {
+    "id": "a98b0ce984fe6d193ca4a8d072a3f770",
+    "sport_key": "icehockey_nhl",
+    "sport_title": "NHL",
+    "commence_time": "2024-03-19T23:08:28Z",
+    "completed": true,
+    "home_team": "New York Rangers",
+    "away_team": "Winnipeg Jets",
+    "scores": [
+      {
+        "name": "New York Rangers",
+        "score": "2"
+      },
+      {
+        "name": "Winnipeg Jets",
+        "score": "4"
+      }
+    ],
+    "last_update": "2024-03-20T23:25:31Z"
+  },
+  {
+    "id": "42bec22c5610619561d686df505a3df4",
+    "sport_key": "icehockey_nhl",
+    "sport_title": "NHL",
+    "commence_time": "2024-03-19T23:08:32Z",
+    "completed": true,
+    "home_team": "Boston Bruins",
+    "away_team": "Ottawa Senators",
+    "scores": [
+      {
+        "name": "Boston Bruins",
+        "score": "6"
+      },
+      {
+        "name": "Ottawa Senators",
+        "score": "2"
+      }
+    ],
+    "last_update": "2024-03-20T23:25:31Z"
+  },
+  {
+    "id": "dff5228910173f81f64ec78d0e294e83",
+    "sport_key": "icehockey_nhl",
+    "sport_title": "NHL",
+    "commence_time": "2024-03-19T23:08:40Z",
+    "completed": true,
+    "home_team": "Philadelphia Flyers",
+    "away_team": "Toronto Maple Leafs",
+    "scores": [
+      {
+        "name": "Philadelphia Flyers",
+        "score": "4"
+      },
+      {
+        "name": "Toronto Maple Leafs",
+        "score": "3"
+      }
+    ],
+    "last_update": "2024-03-20T23:25:31Z"
+  },
+  {
+    "id": "f289a31606a48aa5b8d96f796b693900",
+    "sport_key": "icehockey_nhl",
+    "sport_title": "NHL",
+    "commence_time": "2024-03-19T23:08:44Z",
+    "completed": true,
+    "home_team": "New Jersey Devils",
+    "away_team": "Pittsburgh Penguins",
+    "scores": [
+      {
+        "name": "New Jersey Devils",
+        "score": "5"
+      },
+      {
+        "name": "Pittsburgh Penguins",
+        "score": "2"
+      }
+    ],
+    "last_update": "2024-03-20T23:25:31Z"
+  },
+  {
+    "id": "1fc3b6072cc55869fc95c311c978c7c0",
+    "sport_key": "icehockey_nhl",
+    "sport_title": "NHL",
+    "commence_time": "2024-03-19T23:38:55Z",
+    "completed": true,
+    "home_team": "New York Islanders",
+    "away_team": "Carolina Hurricanes",
+    "scores": [
+      {
+        "name": "New York Islanders",
+        "score": "1"
+      },
+      {
+        "name": "Carolina Hurricanes",
+        "score": "4"
+      }
+    ],
+    "last_update": "2024-03-20T23:25:31Z"
+  },
+  {
+    "id": "7f124f761236ff63d1454e03a0792d84",
+    "sport_key": "icehockey_nhl",
+    "sport_title": "NHL",
+    "commence_time": "2024-03-20T00:08:38Z",
+    "completed": true,
+    "home_team": "St Louis Blues",
+    "away_team": "Colorado Avalanche",
+    "scores": [
+      {
+        "name": "St Louis Blues",
+        "score": "3"
+      },
+      {
+        "name": "Colorado Avalanche",
+        "score": "4"
+      }
+    ],
+    "last_update": "2024-03-20T23:25:31Z"
+  },
+  {
+    "id": "238ca6c3cf61b367e63da0b4f456e74d",
+    "sport_key": "icehockey_nhl",
+    "sport_title": "NHL",
+    "commence_time": "2024-03-20T00:12:27Z",
+    "completed": true,
+    "home_team": "Nashville Predators",
+    "away_team": "San Jose Sharks",
+    "scores": [
+      {
+        "name": "Nashville Predators",
+        "score": "8"
+      },
+      {
+        "name": "San Jose Sharks",
+        "score": "2"
+      }
+    ],
+    "last_update": "2024-03-20T23:25:31Z"
+  },
+  {
+    "id": "a75551fe494e2b199befd304f5f41a1b",
+    "sport_key": "icehockey_nhl",
+    "sport_title": "NHL",
+    "commence_time": "2024-03-20T01:08:46Z",
+    "completed": true,
+    "home_team": "Edmonton Oilers",
+    "away_team": "Montréal Canadiens",
+    "scores": [
+      {
+        "name": "Edmonton Oilers",
+        "score": "3"
+      },
+      {
+        "name": "Montréal Canadiens",
+        "score": "2"
+      }
+    ],
+    "last_update": "2024-03-20T23:25:31Z"
+  },
+  {
+    "id": "16d6606ddb34511c2d0538cc961d144c",
+    "sport_key": "icehockey_nhl",
+    "sport_title": "NHL",
+    "commence_time": "2024-03-20T02:08:09Z",
+    "completed": true,
+    "home_team": "Vancouver Canucks",
+    "away_team": "Buffalo Sabres",
+    "scores": [
+      {
+        "name": "Vancouver Canucks",
+        "score": "3"
+      },
+      {
+        "name": "Buffalo Sabres",
+        "score": "2"
+      }
+    ],
+    "last_update": "2024-03-20T23:25:31Z"
+  },
+  {
+    "id": "7abbd2f342c980c8f724c063d04e2cd1",
+    "sport_key": "icehockey_nhl",
+    "sport_title": "NHL",
+    "commence_time": "2024-03-20T02:08:19Z",
+    "completed": true,
+    "home_team": "Anaheim Ducks",
+    "away_team": "Minnesota Wild",
+    "scores": [
+      {
+        "name": "Anaheim Ducks",
+        "score": "0"
+      },
+      {
+        "name": "Minnesota Wild",
+        "score": "4"
+      }
+    ],
+    "last_update": "2024-03-20T23:25:31Z"
+  },
+  {
+    "id": "162f6d98ee4acf17fd92d5265c7f7be6",
+    "sport_key": "icehockey_nhl",
+    "sport_title": "NHL",
+    "commence_time": "2024-03-20T02:08:39Z",
+    "completed": true,
+    "home_team": "Vegas Golden Knights",
+    "away_team": "Tampa Bay Lightning",
+    "scores": [
+      {
+        "name": "Vegas Golden Knights",
+        "score": "3"
+      },
+      {
+        "name": "Tampa Bay Lightning",
+        "score": "5"
+      }
+    ],
+    "last_update": "2024-03-20T23:25:31Z"
+  },
+  {
+    "id": "4276ee7181f10743f41ed86226ba611e",
+    "sport_key": "icehockey_nhl",
+    "sport_title": "NHL",
+    "commence_time": "2024-03-20T02:10:25Z",
+    "completed": true,
+    "home_team": "Los Angeles Kings",
+    "away_team": "Chicago Blackhawks",
+    "scores": [
+      {
+        "name": "Los Angeles Kings",
+        "score": "6"
+      },
+      {
+        "name": "Chicago Blackhawks",
+        "score": "2"
+      }
+    ],
+    "last_update": "2024-03-20T23:25:31Z"
+  },
+  {
+    "id": "99c691dae63811e26816f590dff0511b",
+    "sport_key": "icehockey_nhl",
+    "sport_title": "NHL",
+    "commence_time": "2024-03-20T23:40:17Z",
+    "completed": true,
+    "home_team": "Washington Capitals",
+    "away_team": "Toronto Maple Leafs",
+    "scores": [
+      {
+        "name": "Washington Capitals",
+        "score": "3"
+      },
+      {
+        "name": "Toronto Maple Leafs",
+        "score": "7"
+      }
+    ],
+    "last_update": "2024-03-21T10:19:35Z"
+  },
+  {
+    "id": "7920b74cdae42578edd501dceaf68bbc",
+    "sport_key": "icehockey_nhl",
+    "sport_title": "NHL",
+    "commence_time": "2024-03-21T00:08:35Z",
+    "completed": true,
+    "home_team": "Dallas Stars",
+    "away_team": "Arizona Coyotes",
+    "scores": [
+      {
+        "name": "Dallas Stars",
+        "score": "5"
+      },
+      {
+        "name": "Arizona Coyotes",
+        "score": "2"
+      }
+    ],
+    "last_update": "2024-03-21T10:19:35Z"
+  },
+  {
+    "id": "46e88a47cb718a6366a83a4017474031",
+    "sport_key": "icehockey_nhl",
+    "sport_title": "NHL",
+    "commence_time": "2024-03-21T02:25:26Z",
+    "completed": true,
+    "home_team": "Los Angeles Kings",
+    "away_team": "Minnesota Wild",
+    "scores": [
+      {
+        "name": "Los Angeles Kings",
+        "score": "6"
+      },
+      {
+        "name": "Minnesota Wild",
+        "score": "0"
+      }
+    ],
+    "last_update": "2024-03-21T10:19:35Z"
+  },
+  {
+    "id": "b33f30ad5541b19794da293edee78bd3",
+    "sport_key": "icehockey_nhl",
+    "sport_title": "NHL",
+    "commence_time": "2024-03-21T23:00:00Z",
+    "completed": false,
+    "home_team": "Boston Bruins",
+    "away_team": "New York Rangers",
+    "scores": null,
+    "last_update": null
+  },
+  {
+    "id": "1f805fe0c16fd30d753e39ab412517cd",
+    "sport_key": "icehockey_nhl",
+    "sport_title": "NHL",
+    "commence_time": "2024-03-21T23:00:00Z",
+    "completed": false,
+    "home_team": "Carolina Hurricanes",
+    "away_team": "Philadelphia Flyers",
+    "scores": null,
+    "last_update": null
+  },
+  {
+    "id": "97a12a88703010863d0f2edc57df5a9a",
+    "sport_key": "icehockey_nhl",
+    "sport_title": "NHL",
+    "commence_time": "2024-03-21T23:00:00Z",
+    "completed": false,
+    "home_team": "Detroit Red Wings",
+    "away_team": "New York Islanders",
+    "scores": null,
+    "last_update": null
+  },
+  {
+    "id": "cd2d174f70aa0f0125e8df03a2dd012d",
+    "sport_key": "icehockey_nhl",
+    "sport_title": "NHL",
+    "commence_time": "2024-03-21T23:00:00Z",
+    "completed": false,
+    "home_team": "New Jersey Devils",
+    "away_team": "Winnipeg Jets",
+    "scores": null,
+    "last_update": null
+  },
+  {
+    "id": "03ba52b68b3e896872c67abaa862b2a1",
+    "sport_key": "icehockey_nhl",
+    "sport_title": "NHL",
+    "commence_time": "2024-03-21T23:00:00Z",
+    "completed": false,
+    "home_team": "Ottawa Senators",
+    "away_team": "St Louis Blues",
+    "scores": null,
+    "last_update": null
+  },
+  {
+    "id": "9e7cea89f4e75488ab1d709d05a23a7b",
+    "sport_key": "icehockey_nhl",
+    "sport_title": "NHL",
+    "commence_time": "2024-03-21T23:30:00Z",
+    "completed": false,
+    "home_team": "Florida Panthers",
+    "away_team": "Nashville Predators",
+    "scores": null,
+    "last_update": null
+  },
+  {
+    "id": "ba640725b24a98b473ea7ad7595e6b7b",
+    "sport_key": "icehockey_nhl",
+    "sport_title": "NHL",
+    "commence_time": "2024-03-22T01:00:00Z",
+    "completed": false,
+    "home_team": "Edmonton Oilers",
+    "away_team": "Buffalo Sabres",
+    "scores": null,
+    "last_update": null
+  },
+  {
+    "id": "3151e9a46207591dda95cd7226c1ef42",
+    "sport_key": "icehockey_nhl",
+    "sport_title": "NHL",
+    "commence_time": "2024-03-22T02:00:00Z",
+    "completed": false,
+    "home_team": "Anaheim Ducks",
+    "away_team": "Chicago Blackhawks",
+    "scores": null,
+    "last_update": null
+  },
+  {
+    "id": "265fbf18487a858ac240e0551293b6cb",
+    "sport_key": "icehockey_nhl",
+    "sport_title": "NHL",
+    "commence_time": "2024-03-22T02:00:00Z",
+    "completed": false,
+    "home_team": "Vancouver Canucks",
+    "away_team": "Montréal Canadiens",
+    "scores": null,
+    "last_update": null
+  },
+  {
+    "id": "26c93da6204b88b49bf25c7399c3561a",
+    "sport_key": "icehockey_nhl",
+    "sport_title": "NHL",
+    "commence_time": "2024-03-22T02:30:00Z",
+    "completed": false,
+    "home_team": "San Jose Sharks",
+    "away_team": "Tampa Bay Lightning",
+    "scores": null,
+    "last_update": null
+  },
+  {
+    "id": "1d0efa741f451a352f445a0ce40bdda0",
+    "sport_key": "icehockey_nhl",
+    "sport_title": "NHL",
+    "commence_time": "2024-03-22T02:30:00Z",
+    "completed": false,
+    "home_team": "Vegas Golden Knights",
+    "away_team": "Seattle Kraken",
+    "scores": null,
+    "last_update": null
+  },
+  {
+    "id": "44a91b0dcba910631bf5b87e74dd7171",
+    "sport_key": "icehockey_nhl",
+    "sport_title": "NHL",
+    "commence_time": "2024-03-22T23:00:00Z",
+    "completed": false,
+    "home_team": "Washington Capitals",
+    "away_team": "Carolina Hurricanes",
+    "scores": null,
+    "last_update": null
+  },
+  {
+    "id": "4cf498bacfd5305772c0ea47d8deb80b",
+    "sport_key": "icehockey_nhl",
+    "sport_title": "NHL",
+    "commence_time": "2024-03-23T00:00:00Z",
+    "completed": false,
+    "home_team": "Dallas Stars",
+    "away_team": "Pittsburgh Penguins",
+    "scores": null,
+    "last_update": null
+  },
+  {
+    "id": "1c92076fe83d2c8b07ad65c05966887f",
+    "sport_key": "icehockey_nhl",
+    "sport_title": "NHL",
+    "commence_time": "2024-03-23T01:00:00Z",
+    "completed": false,
+    "home_team": "Colorado Avalanche",
+    "away_team": "Columbus Blue Jackets",
+    "scores": null,
+    "last_update": null
+  },
+  {
+    "id": "30344e92466b3d4f9b17597a53103a41",
+    "sport_key": "icehockey_nhl",
+    "sport_title": "NHL",
+    "commence_time": "2024-03-23T02:00:00Z",
+    "completed": false,
+    "home_team": "Arizona Coyotes",
+    "away_team": "Seattle Kraken",
+    "scores": null,
+    "last_update": null
+  }
+]

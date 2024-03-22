@@ -8,7 +8,7 @@ internal static class RetrieveHistoricalSportEventOddsMapper
 {
   public static RestRequest ToRestRequest(this RetrieveHistoricalSportEventOddsRequest request)
   {
-    var req = new RestRequest(OddsClient.HistoricalSportEventOddsEndpoint, Method.Get)
+    var restRequest = new RestRequest(HistoricalClient.HistoricalSportEventOddsEndpoint)
       .AddUrlSegment("sport", request.Sport)
       .AddUrlSegment("eventId", request.EventId)
       .AddQueryParameter("regions", request.Regions)
@@ -16,10 +16,11 @@ internal static class RetrieveHistoricalSportEventOddsMapper
       .AddQueryParameter("markets", request.Markets)
       .AddQueryParameter("dateFormat", request.DateFormat)
       .AddQueryParameter("oddsFormat", request.OddsFormat);
+    restRequest.Method = Method.Get;
     
-    if (!String.IsNullOrEmpty(request.Bookmakers))
-      req.AddQueryParameter("bookmakers", request.Bookmakers);
+    if (!string.IsNullOrEmpty(request.Bookmakers))
+      restRequest.AddQueryParameter("bookmakers", request.Bookmakers);
     
-    return req;
+    return restRequest;
   }
 }

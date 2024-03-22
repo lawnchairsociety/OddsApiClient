@@ -1,3 +1,5 @@
+using System.Text.Json.Serialization;
+
 namespace OddsApiClient.Models;
 
 public class SportScores
@@ -5,22 +7,25 @@ public class SportScores
   /// <summary>
   /// A unique 32 character identifier for the event.
   /// </summary>
-  public string Id { get; set; } = String.Empty;
+  public string Id { get; set; } = string.Empty;
 
   /// <summary>
   /// A unique slug (key) for the sport.
   /// </summary>
-  public string SportKey { get; set; } = String.Empty;
+  [JsonPropertyName("sport_key")]
+  public string SportKey { get; set; } = string.Empty;
 
   /// <summary>
   /// A presentable title of the sport.
   /// </summary>
-  public string SportTitle { get; set; } = String.Empty;
+  [JsonPropertyName("sport_title")]
+  public string SportTitle { get; set; } = string.Empty;
 
   /// <summary>
   /// The match start time.
   /// </summary>
-  public DateTime CommenceTime { get; set; } = DateTime.UtcNow;
+  [JsonPropertyName("commence_time")]
+  public DateTime? CommenceTime { get; set; }
 
   /// <summary>
   /// Indicates whether the event has finished.
@@ -30,15 +35,23 @@ public class SportScores
   /// <summary>
   /// The home team. If home/away is not applicable for the sport (such as MMA and Tennis), it will be one of the participants.
   /// </summary>
-  public string HomeTeam { get; set; } = String.Empty;
+  [JsonPropertyName("home_team")]
+  public string HomeTeam { get; set; } = string.Empty;
 
   /// <summary>
   /// The away team. If home/away is not applicable for the sport (such as MMA and Tennis), it will be one of the participants.
   /// </summary>
-  public string AwayTeam { get; set; } = String.Empty;
+  [JsonPropertyName("away_team")]
+  public string AwayTeam { get; set; } = string.Empty;
 
   /// <summary>
   /// A list of teams and their scores.
   /// </summary>
-  public List<ScoreModel> Scores { get; set; } = [];
+  public List<ScoreModel>? Scores { get; set; }
+
+  /// <summary>
+  /// The last time the scores were updated.
+  /// </summary>
+  [JsonPropertyName("last_update")]
+  public DateTime? LastUpdate { get; set; }
 }

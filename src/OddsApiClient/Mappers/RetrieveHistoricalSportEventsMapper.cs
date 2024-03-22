@@ -8,18 +8,19 @@ internal static class RetrieveHistoricalSportEventsMapper
 {
   public static RestRequest ToRestRequest(this RetrieveHistoricalSportEventsRequest request)
   {
-    var req = new RestRequest(OddsClient.HistoricalSportEventsEndpoint, Method.Get)
+    var restRequest = new RestRequest(HistoricalClient.HistoricalSportEventsEndpoint)
       .AddUrlSegment("sport", request.Sport)
       .AddQueryParameter("date", request.Date.ToString("yyyy-MM-ddTHH:mm:ssZ", CultureInfo.InvariantCulture), false)
       .AddQueryParameter("dateFormat", request.DateFormat);
+    restRequest.Method = Method.Get;
     
-    if (!String.IsNullOrEmpty(request.EventIds))
-      req.AddQueryParameter("eventIds", request.EventIds);
+    if (!string.IsNullOrEmpty(request.EventIds))
+      restRequest.AddQueryParameter("eventIds", request.EventIds);
     if (request.CommenceTimeFrom.HasValue)
-      req.AddQueryParameter("commenceTimeFrom", request.CommenceTimeFrom.Value.ToString("yyyy-MM-ddTHH:mm:ssZ", CultureInfo.InvariantCulture), false);
+      restRequest.AddQueryParameter("commenceTimeFrom", request.CommenceTimeFrom.Value.ToString("yyyy-MM-ddTHH:mm:ssZ", CultureInfo.InvariantCulture), false);
     if (request.CommenceTimeTo.HasValue)
-      req.AddQueryParameter("commenceTimeTo", request.CommenceTimeTo.Value.ToString("yyyy-MM-ddTHH:mm:ssZ", CultureInfo.InvariantCulture), false);
+      restRequest.AddQueryParameter("commenceTimeTo", request.CommenceTimeTo.Value.ToString("yyyy-MM-ddTHH:mm:ssZ", CultureInfo.InvariantCulture), false);
     
-    return req;
+    return restRequest;
   }
 }

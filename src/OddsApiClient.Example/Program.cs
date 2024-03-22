@@ -1,4 +1,4 @@
-﻿using System.Text.Json;
+using System.Text.Json;
 using OddsApiClient.Requests;
 
 namespace OddsApiClient.Example;
@@ -9,7 +9,12 @@ public class Program
   {
     var baseUrl = "https://api.the-odds-api.com";
     var apiKey = ""; // Add your free API Key here
-    var client = new OddsClient(baseUrl, apiKey);
+    var clientOptions = new OddsApiClientOptions
+    {
+        BaseUrl = baseUrl,
+        ApiKey = apiKey
+    };
+    var client = new OddsApiClient(clientOptions);
     
     // Retrieve Sports
     var request = new RetrieveSportsRequest
@@ -17,7 +22,7 @@ public class Program
       All = true
     };
 
-    var response = await client.RetrieveSportsAsync(request);
+    var response = await client.Sports.RetrieveSportsAsync(request);
 
     Console.WriteLine(JsonSerializer.Serialize(response));
   }

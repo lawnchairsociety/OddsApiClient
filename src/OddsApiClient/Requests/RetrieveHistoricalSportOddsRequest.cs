@@ -2,7 +2,7 @@ namespace OddsApiClient.Requests;
 
 public class RetrieveHistoricalSportOddsRequest
 {
-  public string Sport { get; set; } = String.Empty;
+  public string Sport { get; set; } = string.Empty;
 
   public string Regions { get; set; } = "us";
 
@@ -12,9 +12,9 @@ public class RetrieveHistoricalSportOddsRequest
 
   public string OddsFormat { get; set; } = "decimal";
 
-  public string EventIds { get; set; } = String.Empty;
+  public string EventIds { get; set; } = string.Empty;
 
-  public string Bookmakers { get; set; } = String.Empty;
+  public string Bookmakers { get; set; } = string.Empty;
 
   public DateTime Date { get; set; } = DateTime.UtcNow;
 }

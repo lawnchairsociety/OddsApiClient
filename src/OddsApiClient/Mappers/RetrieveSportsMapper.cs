@@ -7,9 +7,10 @@ internal static class RetrieveSportsMapper
 {
   public static RestRequest ToRestRequest(this RetrieveSportsRequest request)
   {
-    var req = new RestRequest(OddsClient.SportsEndpoint, Method.Get)
-        .AddParameter("all", request.All ? "true":"false");
+    var restRequest = new RestRequest(SportsClient.SportsEndpoint)
+      .AddParameter("all", request.All ? "true":"false");
+    restRequest.Method = Method.Get;
     
-    return req;
+    return restRequest;
   }
 }

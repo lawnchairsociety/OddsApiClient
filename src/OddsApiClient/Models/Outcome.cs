@@ -3,14 +3,14 @@ namespace OddsApiClient.Models;
 public class Outcome
 {
   
-  public string Name { get; set; } = String.Empty;
+  public string Name { get; set; } = string.Empty;
 
 
-  public decimal Price { get; set; } = 0;
+  public double Price { get; set; } = 0;
 
 
-  public decimal Points { get; set; } = 0;
+  public double Point { get; set; } = 0;
 
 
-  public string Description { get; set; } = String.Empty;
+  public string Description { get; set; } = string.Empty;
 }

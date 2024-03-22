@@ -2,11 +2,11 @@
 using OddsApiClient.Exceptions;
 using RestSharp;
 
-namespace OddsApiClient;
+namespace OddsApiClient.Extensions;
 
 internal static class RestSharpExtensions
 {
-  public static OddsApiClientException BuildExceptionFromResponse(this RestClient client, RestResponse response)
+  public static OddsApiClientException BuildExceptionFromResponse(this IRestClient client, RestResponse response)
   {
     var message = response.Content ?? "Error communicating with the Odds API";
 
