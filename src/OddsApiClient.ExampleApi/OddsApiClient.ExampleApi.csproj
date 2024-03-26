@@ -12,6 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\OddsApiClient.DependencyInjection.Microsoft\OddsApiClient.DependencyInjection.Microsoft.csproj" />
     <ProjectReference Include="..\OddsApiClient\OddsApiClient.csproj" />
   </ItemGroup>
 

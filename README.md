@@ -6,9 +6,10 @@ A client for interacting with the Odds API sports betting API.
 
 This project is labor of love and whatever free time I have to work on it. If you encounter issues or would like to see new features, feel free to open an issue here: [https://github.com/lawnchairsociety/OddsApiClient/issues](https://github.com/lawnchairsociety/OddsApiClient/issues).
 
-There is one library project, one example console project, on example API project, and a unit test project in this repo:
+There is two library projects, one example console project, on example API project, and a unit test project in this repo:
 
 - OddsApiClient
+- OddsApiClient.DependencyInjection.Microsoft
 - OddsApiClient.ExampleConsole
 - OddsApiClient.ExampleApi
 - OddsApiClient.EndToEndTests
