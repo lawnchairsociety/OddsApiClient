@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OddsApiClient.Tests", "test
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OddsApiClient.ExampleConsole", "src\OddsApiClient.ExampleConsole\OddsApiClient.ExampleConsole.csproj", "{3EAD74E6-C888-488D-9D33-A55DA8EF46CC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OddsApiClient.ExampleApi", "src\OddsApiClient.ExampleApi\OddsApiClient.ExampleApi.csproj", "{653541E6-D174-4F67-B194-66369B1607C7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +33,10 @@ Global
 		{3EAD74E6-C888-488D-9D33-A55DA8EF46CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3EAD74E6-C888-488D-9D33-A55DA8EF46CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3EAD74E6-C888-488D-9D33-A55DA8EF46CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{653541E6-D174-4F67-B194-66369B1607C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{653541E6-D174-4F67-B194-66369B1607C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{653541E6-D174-4F67-B194-66369B1607C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{653541E6-D174-4F67-B194-66369B1607C7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -39,6 +45,7 @@ Global
 		{0F43808B-BCBB-497B-B5DB-687FDC11A74B} = {88B89657-1094-41C5-88DD-F6F0CF1C7146}
 		{B4DA9CFC-E9D7-46C3-B27D-8AC2CA0E6488} = {50D6B46B-F996-4426-9593-5D8A028F40F7}
 		{3EAD74E6-C888-488D-9D33-A55DA8EF46CC} = {88B89657-1094-41C5-88DD-F6F0CF1C7146}
+		{653541E6-D174-4F67-B194-66369B1607C7} = {88B89657-1094-41C5-88DD-F6F0CF1C7146}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F7384E8D-5B28-46BA-951D-3A85275D505E}
