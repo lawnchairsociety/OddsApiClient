@@ -11,7 +11,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{50D6B46B
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OddsApiClient.Tests", "tests\OddsApiClient.Tests\OddsApiClient.Tests.csproj", "{B4DA9CFC-E9D7-46C3-B27D-8AC2CA0E6488}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OddsApiClient.Example", "src\OddsApiClient.Example\OddsApiClient.Example.csproj", "{3EAD74E6-C888-488D-9D33-A55DA8EF46CC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OddsApiClient.ExampleConsole", "src\OddsApiClient.ExampleConsole\OddsApiClient.ExampleConsole.csproj", "{3EAD74E6-C888-488D-9D33-A55DA8EF46CC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -9,7 +9,8 @@ This project is labor of love and whatever free time I have to work on it. If yo
 There is one library project, one example console project, and a unit test project in this repo:
 
 - OddsApiClient
-- OddsApiClient.Example
+- OddsApiClient.ExampleConsole
+- OddsApiClient.ExampleApi
 - OddsApiClient.EndToEndTests
 
 ## Prerequisites
