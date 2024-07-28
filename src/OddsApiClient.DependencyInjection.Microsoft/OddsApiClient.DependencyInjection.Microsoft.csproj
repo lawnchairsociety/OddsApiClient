@@ -6,7 +6,7 @@
     <Nullable>enable</Nullable>
 
     <PackageId>OddsApiClient.DependencyInjection.Microsoft</PackageId>
-    <Version>0.1.0</Version>
+    <Version>0.1.1</Version>
     <Description>Dependency injection supports for the OddsApiClient.</Description>
     <Authors>Ben Stoker</Authors>
     <Copyright>All rights reserved Ben Stoker</Copyright>

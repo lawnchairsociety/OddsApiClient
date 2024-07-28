@@ -5,7 +5,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
 
     <PackageId>OddsApiClient</PackageId>
-    <Version>0.1.0</Version>
+    <Version>0.1.1</Version>
     <Description>A client for communicating with The Odds API.</Description>
     <Authors>Ben Stoker</Authors>
     <Copyright>All rights reserved Ben Stoker</Copyright>
